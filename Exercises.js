@@ -85,14 +85,23 @@ function getFirstNotRepeating(str) {
 
 //Question 6 (Bonus)
 function isPrefectNumber(num) {
-  // your code here
-  return "I'm not interested in the bonus question :(";
+  const divisors = [];
+  let summer = 0;
+
+  for (let i = 1; i < num; i++) {
+    if (num%i === 0){
+      divisors.push(i);
+    }
+  }
+    for (let i = 0; i < divisors.length; i++) {
+      summer += divisors[i];
+    }
+  return num === summer;;
 }
 
 // *** Playground ***
   console.log( allCombinations("dog"));
 // *** End of Playground ***
-
 // Don't touch me :)
 exports.myReverse = myReverse;
 exports.allCombinations = allCombinations;
